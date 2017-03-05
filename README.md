@@ -1,0 +1,1 @@
+When a bloodwars report is deleted, rename the link on bloodwars servers and forums. 
