@@ -6,15 +6,21 @@
 // @include     http://r*.fr.bloodwars.net/*
 // @include     http://r*.bloodwars.net/*
 // @include     http://r*.bloodwars.interia.pl/*
-// @version     1
+// @include     https://forum.fr.bloodwars.net/*
+// @include     https://forum.bloodwars.net/*
+// @include     https://forum.bloodwars.interia.pl/*
+// @include     https://r*.fr.bloodwars.net/*
+// @include     https://r*.bloodwars.net/*
+// @include     https://r*.bloodwars.interia.pl/*
+// @version     2.0.0
 // @require     http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js
-// @grant       GM_xmlhttpRequest
+// @grant       GM.xmlHttpRequest
 // ==/UserScript==
 
 function checkIfLinkExist(links, i)
 {
 	var href = links.snapshotItem(i).getAttribute('href');
-	GM_xmlhttpRequest({
+	GM.xmlHttpRequest({
 		method: "GET",
 		url: href,
 		onload: function(response) {
